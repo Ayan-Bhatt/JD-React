@@ -4,7 +4,7 @@ import LTIMlogoBG from '../assets/LTIMlogoBG.png';
 
 function Header() {
   const location = useLocation();
-  const isAdminPage = location.pathname === '/update-jd' || location.pathname === '/admin-description';
+  const isAdminPage = location.pathname === '/update-jd' || location.pathname === '/admin-description' || location.pathname === '/bulk-update';
 
   return (
     <header className="flex items-center justify-between p-4 bg-blue-600 text-white shadow-md">
