@@ -4,17 +4,16 @@ import LTIMlogoBG from '../assets/LTIMlogoBG.png';
 
 function Header() {
   const location = useLocation();
-  const isUpdateJDPage = location.pathname === '/update-jd';
+  const isAdminPage = location.pathname === '/update-jd' || location.pathname === '/admin-description';
 
   return (
     <header className="flex items-center justify-between p-4 bg-blue-600 text-white shadow-md">
       <div className="flex items-center">
         <img src={LTIMlogoBG} alt="Logo" className="h-12 w-34 ml-4" />
-        
       </div>
       
-      {isUpdateJDPage && (
-        <div className="flex items-center space-x-4 mr-6">
+      {isAdminPage && (
+        <div className="flex items-center space-x-4 mr-10">
           <span>Admin</span>
           <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
             {/* Profile Icon */}
