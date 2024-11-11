@@ -1,19 +1,29 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 
 function AdminDescription() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform any form validation or submission logic here
+
+    // Navigate to the thank-you page
+    navigate('/admin-thank-you');
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
-      
-      
+      {/* <Header /> */}
 
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-center p-6 ">
+      <main className="flex-grow flex items-center justify-center p-6">
         <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg border-2 border-black">
           <h2 className="text-2xl font-semibold text-center mb-6">Job Description</h2>
           
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             {/* JD Id */}
             <div>
               <label htmlFor="jdId" className="block text-gray-700 font-bold mb-2">JD Id</label>
@@ -74,7 +84,7 @@ function AdminDescription() {
         </div>
       </main>
 
-      
+      {/* <Footer /> */}
     </div>
   );
 }
