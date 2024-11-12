@@ -35,6 +35,17 @@ function AdminDescription() {
               />
             </div>
 
+            {/* Role */}
+            <div>
+              <label htmlFor="role" className="block text-gray-700 font-bold mb-2">Role</label>
+              <input
+                type="text"
+                id="role"
+                className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter Role"
+              />
+            </div>
+
             {/* Job Description */}
             <div>
               <label htmlFor="jobDescription" className="block text-gray-700 font-bold mb-2">Job Description</label>
@@ -50,7 +61,7 @@ function AdminDescription() {
             <div>
               <label className="block text-gray-700 font-bold mb-2">Primary Skills</label>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-                {Array.from({ length: 5 }).map((_, index) => (
+                {Array.from({ length: 4 }).map((_, index) => (
                   <input
                     key={index}
                     type="text"
@@ -65,7 +76,7 @@ function AdminDescription() {
             <div>
               <label className="block text-gray-700 font-bold mb-2">Secondary Skills</label>
               <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-                {Array.from({ length: 5 }).map((_, index) => (
+                {Array.from({ length: 4 }).map((_, index) => (
                   <input
                     key={index}
                     type="text"
